@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Light Control with Timer</title>
+  
+  <!-- Link to FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Smart Light Control Panel with Timer</h1>
+    <div class="light-controls">
+      <!-- Light 1 Card -->
+      <div class="light-card" id="light1-card">
+        <div class="light-icon" id="light1-icon">
+          <i class="fas fa-lightbulb off"></i>
+        </div>
+        <p class="light-name">Light 1</p>
+        <p class="light-status" id="status-light1">Status: Off</p>
+        <div class="timer-controls">
+          <label for="hours1">Hours:</label>
+          <input type="number" id="hours1" min="0" value="0">
+          <label for="minutes1">Minutes:</label>
+          <input type="number" id="minutes1" min="0" value="0">
+          <label for="seconds1">Seconds:</label>
+          <input type="number" id="seconds1" min="0" value="0">
+        </div>
+        <div class="control-buttons">
+          <label class="toggle-switch">
+            <input type="checkbox" id="relay1">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Light 2 Card -->
+      <div class="light-card" id="light2-card">
+        <div class="light-icon" id="light2-icon">
+          <i class="fas fa-lightbulb off"></i>
+        </div>
+        <p class="light-name">Light 2</p>
+        <p class="light-status" id="status-light2">Status: Off</p>
+        <div class="timer-controls">
+          <label for="hours2">Hours:</label>
+          <input type="number" id="hours2" min="0" value="0">
+          <label for="minutes2">Minutes:</label>
+          <input type="number" id="minutes2" min="0" value="0">
+          <label for="seconds2">Seconds:</label>
+          <input type="number" id="seconds2" min="0" value="0">
+        </div>
+        <div class="control-buttons">
+          <label class="toggle-switch">
+            <input type="checkbox" id="relay2">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Light 3 Card -->
+      <div class="light-card" id="light3-card">
+        <div class="light-icon" id="light3-icon">
+          <i class="fas fa-lightbulb off"></i>
+        </div>
+        <p class="light-name">Light 3</p>
+        <p class="light-status" id="status-light3">Status: Off</p>
+        <div class="timer-controls">
+          <label for="hours3">Hours:</label>
+          <input type="number" id="hours3" min="0" value="0">
+          <label for="minutes3">Minutes:</label>
+          <input type="number" id="minutes3" min="0" value="0">
+          <label for="seconds3">Seconds:</label>
+          <input type="number" id="seconds3" min="0" value="0">
+        </div>
+        <div class="control-buttons">
+          <label class="toggle-switch">
+            <input type="checkbox" id="relay3">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Light 4 Card -->
+      <div class="light-card" id="light4-card">
+        <div class="light-icon" id="light4-icon">
+          <i class="fas fa-lightbulb off"></i>
+        </div>
+        <p class="light-name">Light 4</p>
+        <p class="light-status" id="status-light4">Status: Off</p>
+        <div class="timer-controls">
+          <label for="hours4">Hours:</label>
+          <input type="number" id="hours4" min="0" value="0">
+          <label for="minutes4">Minutes:</label>
+          <input type="number" id="minutes4" min="0" value="0">
+          <label for="seconds4">Seconds:</label>
+          <input type="number" id="seconds4" min="0" value="0">
+        </div>
+        <div class="control-buttons">
+          <label class="toggle-switch">
+            <input type="checkbox" id="relay4">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="lightControl.js"></script>
+</body>
+</html>

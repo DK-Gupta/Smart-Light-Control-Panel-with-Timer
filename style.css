@@ -1,0 +1,325 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container { 
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #4CAF50;
+    z-index: 1; /* Ensure it's on top of other content */
+    position: relative;
+    visibility: visible; /* Ensures it's always visible */
+  }
+  
+  .light-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .light-card {
+    width: 250px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  .light-name {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .light-status {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .light-icon {
+    margin: 20px 0;
+  }
+  
+  .light-icon i {
+    font-size: 50px;
+    color: #ccc;
+  }
+  
+  .light-icon i.on {
+    color: #FFD700;  /* Gold color when the light is on */
+  }
+  
+  .light-icon i.off {
+    color: #ccc; /* Gray color when the light is off */
+  }
+  
+  /* Toggle Switch Styles */
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .toggle-switch input {
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #4CAF50;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  /* Responsive Design: Adjust for mobile devices */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 1.8rem; /* Reduce font size for tablets and mobile devices */
+      color: #4CAF50;
+      margin-bottom: 15px;
+    }
+  
+    .light-controls {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .light-card {
+      width: 100%;
+      max-width: 350px;
+    }
+  
+    .light-name {
+      font-size: 1.2rem;
+    }
+  
+    .light-icon i {
+      font-size: 40px;  /* Smaller icon for mobile */
+    }
+  
+    .light-status {
+      font-size: 0.9rem;
+    }
+  
+    .slider {
+      width: 50px;
+      height: 28px;
+    }
+  
+    .slider:before {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  
+  /* Responsive Design for small mobile (less than 400px) */
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  
+    .light-card {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+    }
+  
+    .light-name {
+      font-size: 1.1rem;
+    }
+  
+    .light-icon i {
+      font-size: 30px;  /* Smaller icon for very small devices */
+    }
+  
+    .light-status {
+      font-size: 0.8rem;
+    }
+  
+    .slider {
+      width: 45px;
+      height: 26px;
+    }
+  
+    .slider:before {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+ /* Timer Input Styles */
+.timer-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    gap: 5px; /* Adds spacing between the elements */
+    flex-wrap: wrap; /* Allows elements to wrap inside the card */
+  }
+  
+  .timer-controls label {
+    font-size: 0.9rem;
+    color: #333;
+    margin-right: 5px;
+  }
+  
+  .timer-controls input {
+    width: 50px; /* Reduce the width to fit better inside the card */
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive adjustments for mobile */
+  @media (max-width: 768px) {
+    .timer-controls input {
+      width: 45px; /* Slightly smaller input width for mobile screens */
+    }
+  
+    .timer-controls {
+      justify-content: center; /* Center-align the controls on smaller screens */
+      gap: 10px; /* Add more space between elements on mobile */
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .timer-controls input {
+      width: 40px; /* Further reduced input width for very small screens */
+    }
+  }
+
+  /* General Card Styles */
+.light-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.light-card {
+  width: 250px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  gap: 5px;
+  flex-wrap: wrap; /* Ensures that elements wrap inside the card */
+}
+
+.timer-controls label {
+  font-size: 0.9rem;
+  color: #333;
+  margin-right: 5px;
+}
+
+.timer-controls input {
+  width: 50px;
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .light-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .light-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .timer-controls input {
+    width: 45px;
+  }
+
+  .timer-controls {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .timer-controls input {
+    width: 40px;
+  }
+
+  .timer-controls {
+    justify-content: center;
+    flex-direction: column; /* Stack timer elements on small screens */
+    gap: 5px;
+  }
+}
+
+  
